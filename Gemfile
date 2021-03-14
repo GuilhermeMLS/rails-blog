@@ -39,6 +39,9 @@ gem 'bulma-rails', '~> 0.9.1'
 # Simple form
 gem 'simple_form', '~> 5.1'
 
+# Beautiful icons
+gem 'font-awesome-rails'
+
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 4.1.0'
