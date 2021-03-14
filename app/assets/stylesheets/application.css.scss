@@ -15,3 +15,13 @@
  */
 @import "bulma";
 @import "font-awesome";
+.black {
+  background-color: black !important;
+}
+.custom-home-btn:hover {
+  background-color: white !important;
+  color: black !important;
+}
+.custom-home-btn-txt:hover {
+
+}

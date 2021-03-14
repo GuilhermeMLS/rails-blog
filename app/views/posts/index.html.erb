@@ -3,20 +3,26 @@
 
 <section class="section">
   <div class="container">
-    <% @posts.each do |post| %>
-      <div class="card">
-        <div class="card-content">
-          <div class="media">
-            <div class="media-content">
-              <p class="title is-4">
-                <%= link_to post.title, post %>
-              </p>
+    <% if @posts.size > 0 %>
+      <% @posts.each do |post| %>
+        <div class="card">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <p class="title is-4">
+                  <%= link_to post.title, post %>
+                </p>
+              </div>
+            </div>
+            <div class="content">
+              <%= post.content %>
             </div>
           </div>
-          <div class="content">
-            <%= post.content %>
-          </div>
         </div>
+      <% end %>
+    <% else %>
+      <div style="text-align: center">
+        Você ainda não criou nenhum post. <a href="<%=new_post_path%>">Criar post</a>.
       </div>
     <% end %>
   </div>
