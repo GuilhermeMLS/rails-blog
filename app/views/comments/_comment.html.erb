@@ -1,0 +1,15 @@
+<div class="box">
+  <article class="media">
+    <div class="media-content">
+      <div class="content">
+        <p>
+          <strong><%= comment.name %></strong>
+          <%= comment.comment %>
+        </p>
+      </div>
+    </div>
+    <p class="level-item">
+      <%= link_to "Excluir", post_comment_path(@post, comment), method: :delete, data: { confirm: "Tem certeza que deseja excluir?" }, class: "button is-danger" %>
+    </p>
+  </article>
+</div>
