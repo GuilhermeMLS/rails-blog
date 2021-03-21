@@ -1,24 +1,17 @@
-# README
+# Rails Blog Example
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple example blog made with Rails.
 
-Things you may want to cover:
+###Features:
+- Posts (1:N relation with Comments);
+- Comments (N:1 relation with Posts);
+- Labels (N:N relation with Posts).
 
-* Ruby version
+### Run application
+```bash
+$ bundle install
+$ rails db:migrate 
+$ rails s
+```
+Notice: using Postgres as database.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
