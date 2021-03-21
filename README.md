@@ -2,7 +2,7 @@
 
 A simple example blog made with Rails.
 
-###Features:
+### Features:
 - Posts (1:N relation with Comments);
 - Comments (N:1 relation with Posts);
 - Labels (N:N relation with Posts).
