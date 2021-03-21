@@ -1,0 +1,8 @@
+<%= simple_form_for([@post, @post.labels.build]) do |f| %>
+  <div class="field">
+    <div class="control">
+      <%= f.input :name, label: 'Nome', input_html: { class: 'input' }, wrapper: false, label_html: { class: 'label' } %>
+    </div>
+  </div>
+  <%= f.submit 'Criar', class: 'button is-primary black' %>
+<% end %>

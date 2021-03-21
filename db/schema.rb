@@ -10,10 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_20_221058) do
+ActiveRecord::Schema.define(version: 2021_03_20_234611) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "assemblies_parts", id: false, force: :cascade do |t|
+    t.bigint "assembly_id"
+    t.bigint "part_id"
+    t.index ["assembly_id"], name: "index_assemblies_parts_on_assembly_id"
+    t.index ["part_id"], name: "index_assemblies_parts_on_part_id"
+  end
+
+  create_table "books_readers", id: false, force: :cascade do |t|
+    t.bigint "book_id", null: false
+    t.bigint "reader_id", null: false
+  end
 
   create_table "comments", force: :cascade do |t|
     t.string "name"
@@ -21,6 +33,17 @@ ActiveRecord::Schema.define(version: 2021_03_20_221058) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "post_id"
+  end
+
+  create_table "labels", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "labels_posts", id: false, force: :cascade do |t|
+    t.bigint "label_id", null: false
+    t.bigint "post_id", null: false
   end
 
   create_table "posts", force: :cascade do |t|

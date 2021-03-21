@@ -32,6 +32,19 @@
   <div class="container">
     <h2 class="subtitle is-5">
       <strong>
+        Categorias
+      </strong>
+    </h2>
+    <%= render @post.labels %>
+    <hr>
+  </div>
+</section>
+
+
+<section class="comments">
+  <div class="container">
+    <h2 class="subtitle is-5">
+      <strong>
         <%= @post.comments.count %> Comentários
       </strong>
     </h2>
@@ -41,5 +54,16 @@
       <h3 class="subtitle is-3">Escrever comentário</h3>
       <%= render 'comments/form' %>
     </div>
+  </div>
+</section>
+
+<section class="comments">
+  <div class="container">
+    <div class="comment-form">
+      <hr>
+      <h3 class="subtitle is-3">Adicionar categoria</h3>
+      <%= render 'labels/form' %>
+    </div>
+    <hr>
   </div>
 </section>
